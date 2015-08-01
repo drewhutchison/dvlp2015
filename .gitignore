@@ -1,1 +1,4 @@
 *.pyc
+slidedeck/.sass-cache
+slidedeck/custom/*.css
+slidedeck/custom/*.css.map
