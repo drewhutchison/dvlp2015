@@ -1,5 +1,10 @@
 @import "reset";
 
+div .terminal {
+  width: 8em;
+  height: 8em;
+}
+
 h1 {
   color:#D8DDAA;
   border-bottom-color:#c2c797;
@@ -19,12 +24,20 @@ h3 {
   color:#c2c797;
 }
 
+span {
+  color:#C2C797;
+}
+
 pre {
   border-color:#ccc;
+  overflow: auto;
+  padding: .1em;
 }
 
 code {
   color:#888;
+  font-size:.4em;
+  font-family: droid sans mono dotted, monospace;
 }
 
 blockquote {

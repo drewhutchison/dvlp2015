@@ -31,7 +31,9 @@
   <!-- highlight.js -->
   <link rel="stylesheet" href="highlight.js/styles/solarized_dark.css">
   <script src="highlight.js/highlight.pack.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
 
 </head>
 <body>
@@ -61,16 +63,18 @@
     <section class="slide">
       <h1>Puzzles: Why?</h1>
       <ul>
-        <li>Provide motivation to learn coding.</li>
+        <li>Provide motivation to code.</li>
         <li>
-        Dive into a new environment, or learn a familiar one better.
-        </li>
+          Learn by doing, whether in a new environment or a familiar one.
         <li>
         <del>
         Practice for interview questions.
       </del>
         </li>
       </ul>
+    </section>
+
+    <section class="slide">
     </section>
 
     <section class="slide">
@@ -81,8 +85,8 @@
       <h1>Puzzles: Where?</h1>
       <h3>
         Codefights
-        (<a ref="https://codefights.com/">https://codefights.com/</a>)
       </h3>
+      (<a ref="https://codefights.com/">https://codefights.com/</a>)
       <ul>
         <li class="slide">Highly gamified</li>
         <li class="slide">More emails than LinkedIn</li>
@@ -93,8 +97,8 @@
       <h1>Puzzles: Where?</h1>
       <h3>
         Project Euler
-        (<a ref="https://projecteuler.net/">https://projecteuler.net/</a>)
       </h3>
+      (<a ref="https://projecteuler.net/">https://projecteuler.net/</a>)
       <ul>
         <li class="slide">Language agnostic</li>
         <li class="slide">Highly mathy</li>
@@ -104,13 +108,7 @@
     <section class="slide">
       <h1>Puzzles: Where?</h1>
       <h3>
-        99 Prolog
-        (<a ref="http://www.ic.unicamp.br/~meidanis/courses/mc336/2009s2/prolog/problemas/">http://www.ic.unicamp.br/~meidanis/courses/mc336/2009s2/prolog/problemas/</a>)
-        Lisp
-        (<a href="http://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html">http://www.ic.unicamp.br/~meidanis/courses/mc336/2006s2/funcional/L-99_Ninety-Nine_Lisp_Problems.html</a>)
-        Haskell
-        (<a href="https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems">https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems</a>)
-        Problems
+        99 (Prolog|Lisp|Haskell) Problems
       </h3>
       <ul>
         <li class="slide">Not necessarily language-specific</li>
@@ -119,10 +117,29 @@
     </section>
 
     <section class="slide">
-      <h1>Puzzle: How?</h1>
     </section>
 
     <section class="slide">
+      <h1>Let's do one!</h1>
+    </section>
+
+    <section class="slide">
+      <h2>Statement of problem</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Statement of problem</h2>
+      <span class="slide">You walk into a bar. The bar is full of pirates.</spam>
+      <span class="slide">There are no tables, all the pirates are sitting at the bar.</spam>
+    </section>
+
+    <section class="slide">
+    <div class="terminal">
+    blah<br>
+    blah<br>
+    blah<br>
+    blah<br>
+    blah<br>
       <pre><code>
 [
 {
@@ -176,6 +193,7 @@
 }
 ]
       </code></pre>
+    </div>
     </section>
 
     <!-- End slides. -->
@@ -221,6 +239,7 @@
 <script>
   $(function() {
     $.deck('.slide');
+    $.deck('disableScale');
   });
 </script>
 </body>
