@@ -2,11 +2,16 @@ SASSOPTS=--scss --style expanded
 
 default: generate
 
-generate:
+generate: generate-sass generate-html
+
+generate-html:
+	bin/assemble.py
+
+generate-sass:
 	sass --update ${SASSOPTS} .
 
-force:
+force-sass:
 	sass --update ${SASSOPTS} --force .
 
-watch:
+watch-sass:
 	sass --watch  ${SASSOPTS} .
