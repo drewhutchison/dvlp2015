@@ -187,7 +187,7 @@ a {
 /* End HTML5 Boilerplate adaptations */
 
 h1 {
-  font-size:4.5em;
+  font-size:2.25em;
 }
 
 h1, .vcenter {
@@ -198,16 +198,11 @@ h1, .vcenter {
 
   .csstransforms & {
     padding:0 48px;
-    position:absolute;
     left:0;
     right:0;
-    top:50%;
-    -webkit-transform:translate(0, -50%);
-    -moz-transform:translate(0, -50%);
-    -ms-transform:translate(0, -50%);
-    -o-transform:translate(0, -50%);
-    transform:translate(0, -50%);
   }
+  border-bottom:3px solid #888;
+  border-top:3px solid #888;
 }
 
 .vcenter h1 {
@@ -222,7 +217,7 @@ h1, .vcenter {
 }
 
 h2 {
-  font-size:2.25em;
+  font-size:1.75em;
   font-weight:bold;
   padding-top:.5em;
   margin:0 0 .66666em 0;
@@ -231,25 +226,25 @@ h2 {
 
 h3 {
   font-size:1.4375em;
-  font-weight:bold;
+  font-weight:normal;
   margin-bottom:.30435em;
 }
 
 h4 {
   font-size:1.25em;
-  font-weight:bold;
+  font-weight:normal;
   margin-bottom:.25em;
 }
 
 h5 {
   font-size:1.125em;
-  font-weight:bold;
+  font-weight:normal;
   margin-bottom:.2222em;
 }
 
 h6 {
   font-size:1em;
-  font-weight:bold;
+  font-weight:normal;
 }
 
 img, iframe, video {
