@@ -1,6 +1,6 @@
 # Challenge Problems: a worked example
 
-Talk given at [develop denver](https://developdenver.org/), August 7th 2015
+Talk given at [develop denver](https://developdenver.org/), August 6th 2015
 
 ## Problemsets
 
