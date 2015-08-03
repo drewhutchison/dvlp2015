@@ -15,7 +15,7 @@ n = int(argv[2]) if len(argv) == 3 else None
 
 solution = imp.load_module(
     fn, *imp.find_module(
-        fn, ['python']
+        fn, ['implementations']
     )).solution
 
 with open('cases.json') as casesfile:

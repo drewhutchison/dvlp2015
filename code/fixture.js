@@ -14,7 +14,7 @@ if (argv.length < 3 || argv.length > 4) {
   usage();
 };
 
-var solution_file = "./js/" + argv[2] + ".js";
+var solution_file = "./implementations/" + argv[2] + ".js";
 
 var solution = require(solution_file).solution;
 
