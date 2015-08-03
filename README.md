@@ -24,7 +24,9 @@ fd_
 - node
 - sass
 
-To build the slides, `cd slidedeck && make`. Slides are generated as 
+Don't forget to `git submodule update --init`.
+
+After that, `cd slidedeck && make`. Slides are generated as 
 `slidedeck/index.html`
 
 ## Running testcases
