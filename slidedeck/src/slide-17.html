@@ -1,31 +1,7 @@
     <section class="slide">
     <h2>A naive implementation</h2>
     <div class="slide">
-      <var>code/naive1.js:</var>
-      <div class="terminal">
-        <pre><code>
-"use strict";
-
-var answer = function(pirates) {
-
-  var spoken = []; // pirates we've spoken to
-  var current_pirate = 0; // pirate we're presently speaking to
-
-  for (var i=0; i&lt;=pirates.length; i++) {
-
-    if (spoken.indexOf(current_pirate) != -1) {
-      // if we've talked to current_pirate already
-      return spoken.length;
-    } else {
-      spoken.push(current_pirate);
-      current_pirate = pirates[current_pirate];
-    };
-
-  };
-};
-
-console.log(answer([1, 2, 0]));
-        </code></pre>
-      </div>
+      <var>code/implementations/naive1.js:</var>
+      $LIST(implementations/naive1.js)
     </div>
     </section>
