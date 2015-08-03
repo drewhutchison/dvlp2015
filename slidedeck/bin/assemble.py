@@ -56,7 +56,7 @@ def do_exec(arg):
 
   return '''
       <div class="terminal">
-        <pre><code>{} > {}\n\n{}</code></pre>
+        <pre><code>{}/ > {}\n\n{}</code></pre>
       </div>
 '''.format(
     path,

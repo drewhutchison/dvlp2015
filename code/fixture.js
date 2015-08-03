@@ -16,20 +16,12 @@ if (argv.length < 3 || argv.length > 4) {
 
 var solution_file = "./implementations/" + argv[2] + ".js";
 
+console.log('requiring ' + solution_file);
 var solution = require(solution_file).solution;
 
 var cases = require('./cases.json');
 
 var try_case = function(i) {
-
-  console.log('--------------------' +
-              '--------------------' +
-              '--------------------' +
-              '--------------------'
-             );
-
-  console.log("trying case " + i);
-  console.log();
 
   var thiscase = cases[i];
   var pirates = thiscase.pirates;
@@ -37,12 +29,11 @@ var try_case = function(i) {
   var myanswer = solution(pirates);
 
   console.log();
+  console.log("trying testcase " + i + ": [" + pirates + "]");
+
   console.log("my answer: " + myanswer + ". correct answer: " + answer);
-  console.log();
 
 };
-
-console.log();
 
 if (argv.length == 4) {
   try_case(argv[3]);
