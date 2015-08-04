@@ -2,6 +2,8 @@
 
 var solution = function(pirates) {
 
+  console.log('solutioning', pirates)
+
   var spoken = []; // pirates we've spoken to
   var current_pirate = 0; // pirate we're presently speaking to
 
@@ -19,7 +21,7 @@ var solution = function(pirates) {
   };
 };
 
+module.exports.solution = solution;
+
 console.log(solution([1, 2, 0]));
 console.log(solution([1, 2, 1]));
-
-module.exports.solution = solution;
