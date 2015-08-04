@@ -30,15 +30,23 @@ def do_macro(line):
 
   return line
 
+def get_div(precode):
+  cssclass = 'terminal' if precode.count('\n') < 31 else 'terminal-scroll'
+  return '''
+      <div class="{}">
+        <pre><code>{}</code></pre>
+      </div>
+  '''.format(
+      cssclass,
+      precode
+      )
+
+
 def do_list(arg):
   fn = join(CODE_PATH, arg)
   print 'inserting listing of {}'.format(fn)
   with open(fn) as listing:
-    return '''
-      <div class="terminal">
-        <pre><code>{}</code></pre>
-      </div>
-  '''.format(listing.read())
+    return get_div(listing.read())
 
 def do_exec(arg):
 
@@ -54,15 +62,11 @@ def do_exec(arg):
 
   cmdargs = cmd.split(' ')
 
-  return '''
-      <div class="terminal">
-        <pre><code>{}/ > {}\n\n{}</code></pre>
-      </div>
-'''.format(
+  return get_div('{}/ > {}\n\n{}'.format(
     path,
     cmd,
     check_output(cmdargs)
-  )
+  ))
 
 def fncmp(a, b):
   """

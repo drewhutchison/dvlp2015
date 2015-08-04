@@ -1,8 +1,14 @@
 @import "reset";
 
-div .terminal {
+div .terminal, .terminal-scroll {
   width: 30em;
-  height: 8em;
+  border:1px solid #888;
+}
+
+div .terminal-scroll {
+  height: 24em;
+  position: relative;
+  overflow: auto;
 }
 
 h1 {
@@ -28,10 +34,14 @@ span {
   color:#C2C797;
 }
 
+#chighlight {
+  background:#700;
+}
+
 pre {
-  border-color:#ccc;
   overflow: auto;
   padding: .1em;
+  margin: 0px;
 }
 
 code {
