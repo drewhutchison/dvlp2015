@@ -1,5 +1,10 @@
 @import "reset";
 
+html, body {
+  overflow: hidden;
+  height: 100%;
+}
+
 div .terminal, .terminal-scroll {
   width: 30em;
   border:1px solid #888;
