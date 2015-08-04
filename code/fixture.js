@@ -26,10 +26,11 @@ var try_case = function(i) {
   var thiscase = cases[i];
   var pirates = thiscase.pirates;
   var answer = thiscase.answer;
-  var myanswer = solution(pirates);
 
   console.log();
   console.log("trying testcase " + i + ": [" + pirates + "]");
+
+  var myanswer = solution(pirates);
 
   console.log("my answer: " + myanswer + ". correct answer: " + answer);
 
