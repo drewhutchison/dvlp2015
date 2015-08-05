@@ -47,7 +47,9 @@ def do_list(arg):
   fn = join(CODE_PATH, arg)
   print 'inserting listing of {}'.format(fn)
   with open(fn) as listing:
-    return get_div(listing.read())
+    return '<!-- listing of {} -->\n {}'.format(
+        arg,
+        get_div(listing.read()))
 
 def do_exec(arg):
 
@@ -63,11 +65,13 @@ def do_exec(arg):
 
   cmdargs = cmd.split(' ')
 
-  return get_div('{}/ > {}\n\n{}'.format(
-    path,
-    cmd,
-    check_output(cmdargs)
-  ))
+  return '<!-- execution of {} -->\n{} -->'.format(
+      arg,
+      get_div('{}/ > {}\n\n{}'.format(
+        path,
+        cmd,
+        check_output(cmdargs)
+  )))
 
 def fncmp(a, b):
   """
