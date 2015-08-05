@@ -14,7 +14,7 @@ CODE_PATH = abspath(join(ROOT_PATH, 'code'))
 def copy(infn):
   print 'copying ' + infn
   with open(infn) as infile:
-    outfile.write('<!-- {} -->'.format(infn.split('/')[-1]))
+    outfile.write('<!-- {} -->\n'.format(infn.split('/')[-1]))
     inlines = infile.readlines()
     outfile.writelines([do_macro(line) for line in inlines])
     outfile.write('\n')
