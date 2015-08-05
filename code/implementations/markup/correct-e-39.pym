@@ -1,7 +1,7 @@
 def solution(pirates):
 
   spoken = [0] # pirates we've spoken to
-<span id="chighlight">  current_pirate = 0 # pirate we're presently speaking to</span>
+  <span id="chighlight">current_pirate = 0 # pirate we're presently speaking to</span>
 
   for i in range(len(pirates)+1):
 

@@ -1,0 +1,12 @@
+def solution(pirates):
+
+  spoken = [0]
+  current_pirate = pirates[0]
+
+  for i in pirates:
+
+    if <span id="chighlight">current_pirate</span> not in spoken:
+      spoken.append(<span id="chighlight">current_pirate</span>)
+      current_pirate = pirates[<span id="chighlight">current_pirate</span>]
+    else:
+      return len(spoken) - spoken.index(<span id="chighlight">current_pirate</span>)
