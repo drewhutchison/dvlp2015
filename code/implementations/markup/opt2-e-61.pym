@@ -9,4 +9,3 @@ def solution(pirates):
       spoken.append(pirates[spoken[-1]])
 
   return len(spoken) - spoken.index(pirates[spoken[-1]])
-
