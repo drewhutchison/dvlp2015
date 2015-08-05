@@ -1,0 +1,19 @@
+def solution(pirates):
+
+  spoken = <span id="chighlight">reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])</span>
+
+  return len(reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                   pirates, [0])) - (
+    reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+      if pirates[spoken[-1]] not in spoken \
+      else spoken,
+      pirates, [0])).index(pirates[<span id="chighlight">reduce(lambda spoken, dummy: \
+        spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])</span> [-1]])

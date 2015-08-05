@@ -1,0 +1,10 @@
+def solution(pirates):
+
+  <span id="chighlight">def new_spoken(spoken, dummy=None):</span>
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(<span id="chighlight">new_spoken</span>, pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])

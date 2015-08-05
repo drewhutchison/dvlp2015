@@ -1,0 +1,14 @@
+def solution(pirates):
+
+  def new_spoken(spoken):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = new_spoken(spoken)
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])

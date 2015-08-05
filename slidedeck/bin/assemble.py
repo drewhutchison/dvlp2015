@@ -65,7 +65,7 @@ def do_exec(arg):
 
   cmdargs = cmd.split(' ')
 
-  return '<!-- execution of {} -->\n{} -->'.format(
+  return '<!-- execution of {} -->\n{}'.format(
       arg,
       get_div('{}/ > {}\n\n{}'.format(
         path,
