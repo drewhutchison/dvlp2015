@@ -28,7 +28,7 @@ var try_case = function(i) {
   var answer = thiscase.answer;
 
   console.log();
-  console.log("trying testcase " + i + ": [" + pirates + "]");
+  console.log("trying testcase " + i + ":", pirates);
 
   var myanswer = solution(pirates);
 

@@ -24,22 +24,19 @@ with open('cases.json') as casesfile:
 
 def try_case(i):
 
-    print '-' * 80
-    print 'trying case {}'.format(i)
-    print
-
     case = cases[i]
     pirates = case['pirates']
     answer = case['answer']
-    myanswer = solution(pirates)
 
     print
+    print 'trying testcase {}: {}'.format(i, pirates)
+
+    myanswer = solution(pirates)
+
     print 'my answer: {}. correct answer: {}'.format(
         myanswer,
         answer
     )
-    print
 
-print
 for i in [n] if n is not None else range(len(cases)):
     try_case(i)
