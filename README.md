@@ -11,10 +11,12 @@ Talk given at [develop denver](https://developdenver.org/), August 6th 2015
 - [99 Haskell](https://wiki.haskell.org/H-99:_Ninety-Nine_Haskell_Problems)
 - [Ponder This](https://www.research.ibm.com/haifa/ponderthis/index.shtml)
 - [Python Challenge](http://www.pythonchallenge.com/)
-- [/r/programming 
+- Somewhat relevant [/r/programming 
   thread](http://www.reddit.com/r/programming/comments/70y1m/ask_proggit_does_anyone_know_of_an_online)
 
-fd_
+## More info
+
+[Wikipedia: Cycle Detection](https://en.wikipedia.org/wiki/Cycle_detection)
 
 ## Building slides
 
@@ -58,3 +60,5 @@ case from `cases.json` is tried.
 - `code/fixture.js`: test fixture for js implementations
 - `code/fixture.py`: test fixture for python implementations
 - `code/implementations/`: solution implementations
+- `code/implementations/markup`: copies of implementations with <span>
+   elements for presentation. Not much interesting here.
