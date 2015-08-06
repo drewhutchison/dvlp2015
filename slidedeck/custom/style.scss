@@ -18,9 +18,9 @@ div .terminal-scroll {
 }
 
 h1 {
-  color:#D8DDAA;
-  border-bottom-color:#c2c797;
-  border-top-color:#c2c797;
+  color:#e0e0aa;
+  border-bottom-color:#bfc774;
+  border-top-color:#bfc774;
   margin-top:1em;
   margin-bottom:1em;
   padding-top:1em;
@@ -28,8 +28,8 @@ h1 {
 }
 
 h2 {
-  color:#C2C797;
-  border-bottom-color:#c2c797;
+  color:#e0e0aa;
+  border-bottom-color:#bfc774;
 }
 
 h3 {
@@ -53,7 +53,7 @@ pre {
 code {
   color:#888;
   font-size:.6em;
-  font-family: "droid sans mono dotted", monospace;
+  font-family: "droid sans mono dotted", "droid sand mono", monospace;
 }
 
 blockquote {
@@ -148,5 +148,9 @@ li, p {
 
 var {
   font-family: droid sans mono dotted;
-  color: red;
+  font-style: normal;
+  color: #8f9557;
+  background-color: #002b36;
+  padding-left: .15em;
+  padding-right: .15em;
 }

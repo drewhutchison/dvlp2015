@@ -1,8 +1,8 @@
-def solution(pirates):
+<span id="chighlight">solution = lambda pirates: \</span>
 
-  <span id="chighlight">spoken</span> = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
                    if pirates[spoken[-1]] not in spoken \
                    else spoken,
                   pirates, [0])
 
-  return len(<span id="chighlight">spoken</span>) - spoken.index(pirates[spoken[-1]])
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
