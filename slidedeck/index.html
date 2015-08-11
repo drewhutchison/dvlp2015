@@ -1,0 +1,4176 @@
+<!-- head.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Your deck.js Presentation</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="deck.js/core/deck.core.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="deck.js/extensions/goto/deck.goto.css">
+  <link rel="stylesheet" media="screen" href="deck.js/extensions/menu/deck.menu.css">
+  <link rel="stylesheet" media="screen" href="deck.js/extensions/navigation/deck.navigation.css">
+  <link rel="stylesheet" media="screen" href="deck.js/extensions/status/deck.status.css">
+  <link rel="stylesheet" media="screen" href="deck.js/extensions/scale/deck.scale.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="custom/style.css">
+
+  <link rel="stylesheet" media="screen" href="custom/transition.css">
+
+  <!-- Basic black and white print styles -->
+  <link rel="stylesheet" media="print" href="deck.js/core/print.css">
+
+  <!-- Required Modernizr file -->
+  <script src="deck.js/modernizr.custom.js"></script>
+
+  <!-- highlight.js -->
+  <link rel="stylesheet" href="highlight.js/styles/solarized_dark.css">
+  <script src="highlight.js/highlight.pack.js"></script>
+  <script>
+    hljs.initHighlightingOnLoad();
+  </script>
+
+</head>
+<body>
+  <div class="deck-container">
+
+    <!-- Begin slides. Just make elements with a class of slide. -->
+
+
+<!-- slide-0.html -->
+    <section class="slide">
+      <h1>Challenge problems: a worked example</h1>
+      <h2>Andrew Hutchison</h2>
+      <h3>Product manager, Nimbus Nine, Inc</h3>
+      <h3>@drewhutchison</h3>
+      <h3><a href="http://github.com/drewhutchison/dvlp2015</h3>">http://github.com/drewhutchison/dvlp2015</a></h3>
+    </section>
+
+<!-- slide-1.html -->
+    <section class="slide">
+      <h1>Puzzles: Why?</h1>
+      <ul>
+        <li class="slide">Provide motivation to code.</li>
+        <li class="slide">
+          Learn by doing, whether in a new environment or a familiar one.
+        </li>
+        <li class="slide">Practice for interview questions.</li>
+      </ul>
+    </section>
+
+<!-- slide-2.html -->
+    <section class="slide">
+      <h1>Puzzles: Why?</h1>
+      <ul>
+        <li>Provide motivation to code.</li>
+        <li>
+          Learn by doing, whether in a new environment or a familiar one.
+        <li>
+        <del>
+        Practice for interview questions.
+      </del>
+        </li>
+      </ul>
+    </section>
+
+<!-- slide-3.html -->
+    <section class="slide">
+    </section>
+
+<!-- slide-4.html -->
+    <section class="slide">
+      <h1>Puzzles: Where?</h1>
+    </section>
+
+<!-- slide-5.html -->
+    <section class="slide">
+      <h1>Puzzles: Where?</h1>
+      <h3>
+        Codefights
+      </h3>
+      <a ref="https://codefights.com/">https://codefights.com/</a>
+      <ul>
+        <li class="slide">Highly gamified</li>
+        <li class="slide">More emails than LinkedIn</li>
+      </ul>
+    </section>
+
+<!-- slide-6.html -->
+    <section class="slide">
+      <h1>Puzzles: Where?</h1>
+      <h3>
+        Project Euler
+      </h3>
+      <a ref="https://projecteuler.net/">https://projecteuler.net/</a>
+      <ul>
+        <li class="slide">Language agnostic</li>
+        <li class="slide">Highly mathy</li>
+      </ul>
+    </section>
+
+<!-- slide-7.html -->
+    <section class="slide">
+      <h1>Puzzles: Where?</h1>
+      <h3>
+        99 (Prolog|Lisp|Haskell) Problems
+      </h3>
+      <ul>
+        <li class="slide">Not necessarily language-specific</li>
+        <li class="slide">Solve all 99, win free velcro shoes!</li>
+      </ul>
+    </section>
+
+<!-- slide-8.html -->
+    <section class="slide">
+    </section>
+
+<!-- slide-9.html -->
+    <section class="slide">
+      <h1>Let's do one!</h1>
+    </section>
+
+<!-- slide-10.html -->
+    <section class="slide">
+      <h2>Statement of problem</h2>
+    </section>
+
+<!-- slide-11.html -->
+    <section class="slide">
+      <h2>Statement of problem</h2>
+      <p>You walk into a bar. The bar is full of pirates.</p>
+      <p class="slide">You talk to the leftmost pirate at the bar. We'll call 
+      him the <em>first</em>
+      pirate.</p>
+    </section>
+
+<!-- slide-12.html -->
+    <section class="slide">
+      <h2>Statement of problem</h2>
+      <p>The first pirate doesn't want to talk to you. He tells you to talk to
+      the pirate to his right, whom we'll call the <em>second</em> pirate.</p>
+    </section>
+
+<!-- slide-13.html -->
+    <section class="slide">
+      <h2>Statement of problem</h2>
+      <p>The second pirate doesn't want to talk to you either. He tells you
+      to talk to the pirate to his right, whom we'll call the 
+      <em>third</em> pirate.</p>
+    </section>
+
+<!-- slide-14.html -->
+    <section class="slide">
+      <h2>Statement of problem</h2>
+      <p>The third pirate doesn't want to talk to you either! He tells you
+      to talk to the first pirate again.</p>
+    </section>
+
+<!-- slide-15.html -->
+    <section class="slide">
+      <h2>Statement of problem: formal</h2>
+      <ul>
+        <li class="slide">There are <var>N</var> pirates.</li>
+        <ul>
+          <li class="slide">We call them "first", "second", etc, in the order
+          they are sitting from the left.</li>
+        </ul>
+        <li class="slide">You begin by talking to the first.</li>
+        <li class="slide">None of the pirates wants to talk to you, and each
+        refers you to someone else.</li>
+        <ul>
+          <li class="slide">This is always the same pirate, respecitvely.
+          i.e. they never change their minds</li>
+        </ul>
+        <li class="slide">There is some number <var>n</var>
+        (<var>n</var>&#x2264;<var>N</var>)
+        such that the <var>n</var><sup>th</sup> pirate you talk to refers you
+        to one you've already talked to.</li>
+        <ul>
+          <li class="slide">This forms a <em>cycle</em></li>
+        </ul>
+        <li class="slide"><strong>Find <var>c</var>, the cardinality of that
+          cycle.</strong></li>
+      </ul>
+    </section>
+
+<!-- slide-16.html -->
+    <section class="slide">
+    <h2>Statement of problem: representation</h2>
+    <p class="slide">
+      Represent a given problem case as a list 
+      <var>pirates</var>.
+    </p>
+    <p class="slide">
+      <var>pirates[0]</var> is the first pirate,
+      <var>pirates[1]</var> the second, etc.
+    </p>
+    <p class="slide">
+      &rArr; The length of this list is <var>N</var>.
+    </p>
+    <p class="slide">
+      The value of each list element is an integer, which is the
+      index of the next pirate to talk to.
+    </p>
+    <p class="slide">
+      &rArr; For our first example, 
+      <var>pirates = [1, 2, 0]</var>.
+    </p>
+    <p class="slide"><strong>Define a function <var>solution()</var> such that
+      <var>solution(pirates)</var> returns <var>c</var>.</strong></p>
+    <p class="slide">&rArr; <var>solution([1, 2, 0]) &rarr; 3</var></p>
+    </section>
+
+<!-- slide-16-0.html -->
+    <section class="slide">
+    <h2>Statement of problem: representation</h2>
+    <var>[1, 2, 0]</var>
+    <img src="graphviz/120.gv.svg">
+    </section>
+
+<!-- slide-16-1.html -->
+    <section class="slide">
+    <h2>Statement of problem: representation</h2>
+    <var>[<span id="chighlight">1</span>, 2, 0]</var>
+    <img src="graphviz/120-1.gv.svg">
+    </section>
+
+<!-- slide-16-2.html -->
+    <section class="slide">
+    <h2>Statement of problem: representation</h2>
+    <var>[1, <span id="chighlight">2</span>, 0]</var>
+    <img src="graphviz/120-2.gv.svg">
+    </section>
+
+<!-- slide-16-3.html -->
+    <section class="slide">
+    <h2>Statement of problem: representation</h2>
+    <var>[1, 2, <span id="chighlight">0</span>]</var>
+    <img src="graphviz/120-3.gv.svg">
+    </section>
+
+<!-- slide-17.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div class="slide">
+      <p><var>code/implementations/naive1.js</var>:</p>
+<!-- listing of implementations/naive1.js -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  for (var i=0; i<=pirates.length; i++) {
+
+    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } else {
+      // otherwise, we're done
+      return spoken.length;
+    };
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-17-1.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+      <p><var>code/implementations/naive1.js</var>:</p>
+<!-- listing of implementations/markup/naive1-1.jsm -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+<span id="chighlight">  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to</span>
+
+  for (var i=0; i<=pirates.length; i++) {
+
+    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } else {
+      // otherwise, we're done
+      return spoken.length;
+    };
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+</code></pre>
+      </div>
+        <p>Define state variables to track the pirate we're presently speaking to
+      (the first pirate is <var>0</var>) and the pirates we've already spoken
+      to (initally none)</p>
+    </div>
+    </section>
+
+<!-- slide-17-2.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+      <p><var>code/implementations/naive1.js</var>:</p>
+<!-- listing of implementations/markup/naive1-2.jsm -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  <span id="chighlight">for (var i=0; i<=pirates.length; i++) {</span>
+
+    if (spoken.indexOf(current_pirate) == -1) {</span>
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } else {
+      // otherwise, we're done
+      return spoken.length;
+    >};
+
+  <span id="chighlight">};</span>
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+</code></pre>
+      </div>
+        <p>
+      Enter a loop. <var>N+1</var> iterations will suffice to find a cycle.
+      </p>
+    </div>
+    </section>
+
+<!-- slide-17-3.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+      <p><var>code/implementations/naive1.js</var>:</p>
+<!-- listing of implementations/markup/naive1-3.jsm -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  for (var i=0; i<=pirates.length; i++) {
+
+<span id="chighlight">    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    }</span> else {
+      // otherwise, we're done
+      return spoken.length;
+    };
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+</code></pre>
+      </div>
+        <p>
+      if <var>current_pirate</var> isn't in <var>spoken</var>, add it,
+      and update <var>current_pirate</var> to the pirate we're supposed to
+      talk to next iteration.
+      </p>
+    </div>
+    </section>
+
+<!-- slide-17-4.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+      <p><var>code/implementations/naive1.js</var>:</p>
+<!-- listing of implementations/markup/naive1-4.jsm -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  for (var i=0; i<=pirates.length; i++) {
+
+    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } <span id="chighlight">else {
+      // otherwise, we're done
+      <span id="chighlight">return spoken.length;</span>
+    };</span>
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+</code></pre>
+      </div>
+        <p>
+      Otherwise (<var>current_pirate</var> <em>is</em> in <var>spoken</var>),
+      we've found a cycle. Return the length of <var>spoken</var>.
+      </p>
+    </div>
+    </section>
+
+<!-- slide-17-5.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+      <p><var>code/implementations/naive1.js</var>:</p>
+<!-- listing of implementations/naive1.js -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  for (var i=0; i<=pirates.length; i++) {
+
+    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } else {
+      // otherwise, we're done
+      return spoken.length;
+    };
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-18.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+<!-- execution of code/implementations, node naive1.js -->
+
+      <div class="terminal">
+        <pre><code>code/implementations/ > node naive1.js
+
+solutioning [ 1, 2, 0 ]
+3
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-19.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+      <p><var>code/implementations/naive1.js</var>:</p>
+<!-- listing of implementations/naive1.js -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  for (var i=0; i<=pirates.length; i++) {
+
+    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } else {
+      // otherwise, we're done
+      return spoken.length;
+    };
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-20.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+      <p><var>code/implementations/naive2.js</var>:</p>
+<!-- listing of implementations/naive2.js -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  for (var i=0; i<=pirates.length; i++) {
+
+    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } else {
+      // otherwise, we're done
+      return spoken.length;
+    };
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+console.log(solution([1, 2, 1]));
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-20-1.html -->
+    <section class="slide">
+    <h2>Statement of problem: representation</h2>
+    <var>[1, 2, 1]</var>
+    <img src="graphviz/121.gv.svg">
+    </section>
+
+<!-- slide-21.html -->
+    <section class="slide">
+    <h2>A naive implementation</h2>
+    <div>
+<!-- execution of code/implementations, node naive2.js -->
+
+      <div class="terminal">
+        <pre><code>code/implementations/ > node naive2.js
+
+solutioning [ 1, 2, 0 ]
+3
+solutioning [ 1, 2, 1 ]
+3
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-22.html -->
+    <section class="slide">
+    <h2>A correct implementation</h2>
+    <div class="slide">
+      <p><span><var>code/implementations/correct.js</var>:</span></p>
+<!-- listing of implementations/correct.js -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  for (var i=0; i<=pirates.length; i++) {
+
+    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } else {
+      // otherwise, we're done
+      return spoken.length - spoken.indexOf(current_pirate);
+    };
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+console.log(solution([1, 2, 1]));
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-22-1.html -->
+    <section class="slide">
+    <h2>A correct implementation</h2>
+    <div>
+      <p><span><var>code/implementations/correct.js</var>:</span></p>
+<!-- listing of implementations/markup/correct-1.jsm -->
+ 
+      <div class="terminal">
+        <pre><code>"use strict";
+
+var solution = function(pirates) {
+
+  console.log('solutioning', pirates)
+
+  var spoken = []; // pirates we've spoken to
+  var current_pirate = 0; // pirate we're presently speaking to
+
+  for (var i=0; i<=pirates.length; i++) {
+
+    if (spoken.indexOf(current_pirate) == -1) {
+      // we haven't talked to current_pirate yet
+      spoken.push(current_pirate);
+      current_pirate = pirates[current_pirate];
+    } else {
+      // otherwise, we're done
+<span id="chighlight">      return spoken.length - spoken.indexOf(current_pirate);</span>
+    };
+
+  };
+};
+
+module.exports.solution = solution;
+
+console.log(solution([1, 2, 0]));
+console.log(solution([1, 2, 1]));
+</code></pre>
+      </div>
+      </div>
+    <p>
+    Subtract off any pirates we'd talked to prior entering to the cycle.
+    </p>
+    </section>
+
+<!-- slide-23.html -->
+    <section class="slide">
+    <h2>A correct implementation</h2>
+    <div>
+<!-- execution of code/implementations, node correct.js -->
+
+      <div class="terminal">
+        <pre><code>code/implementations/ > node correct.js
+
+solutioning [ 1, 2, 0 ]
+3
+solutioning [ 1, 2, 1 ]
+2
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-24.html -->
+    <section class="slide">
+    <h2>Further testcases</h2>
+    <p class="slide">
+      We've seen two testcases. More are found in 
+      <var>code/cases.json
+    </p>
+    <div class="slide">
+<!-- listing of cases.json -->
+ 
+      <div class="terminal-scroll">
+        <pre><code>[
+    {
+        "pirates": [1, 2, 0],
+        "answer": 3
+    },
+    {
+        "pirates": [1, 2, 1],
+        "answer": 2
+    },
+    {
+        "pirates": [1, 3, 0, 1],
+        "answer": 2
+    },
+    {
+        "pirates": [2, 1, 3, 2],
+        "answer": 2
+    },
+    {
+        "pirates": [2, 2, 4, 4, 0],
+        "answer": 3
+    },
+    {
+        "pirates": [2, 3, 1, 4, 5, 0],
+        "answer": 6
+    },
+    {
+        "pirates": [1, 7, 1, 4, 5, 0, 7, 6],
+        "answer": 2
+    },
+    {
+        "pirates": [19, 3, 1, 21, 22, 11, 13, 12, 8, 20, 32, 27, 2, 4, 23, 9,
+                    36, 25, 39, 0, 15, 16, 38, 26, 37, 33, 7, 17, 29, 10, 34,
+                    6, 35, 31, 24, 18, 30, 4, 14, 3],
+        "answer": 2
+    },
+    {
+        "pirates": [12, 47, 7, 58, 53, 28, 9, 10, 5, 21, 27, 1, 13, 30, 38, 19,
+                    18, 35, 57, 26, 36, 20, 33, 32, 6, 2, 24, 29, 8, 52, 54, 0,
+                    44, 39, 23, 37, 4, 51, 40, 45, 55, 22, 34, 59, 43, 46, 49,
+                    3, 14, 41, 42, 25, 56, 11, 15, 16, 50, 17, 48, 31],
+         "answer": 50
+    }
+
+]
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-25.html -->
+    <section class="slide">
+    <h2>Test fixture</h2>
+    <div class="slide">
+      <p>
+        <var>code/fixture.js</var> will run these for us.
+      </p>
+    </div>
+    <div class="slide">
+      <p>
+        Usage:
+      </p>
+
+      <p>
+        <var>node fixture.js &lt;implementation&gt; [&lt;case&gt;]</var>
+
+        <ul>
+          <li><var>implementation</var>: implementation file in 
+          <var>code/implementations</var>, without file extension, to run
+          </li>
+          <li><var>case</var> (optional): integer (zero-indexed) of case to run
+      </p>
+
+    </div>
+    </section>
+
+<!-- slide-26.html -->
+    <section class="slide">
+    <h2>Test fixture</h2>
+    <div class="slide">
+<!-- execution of code, node fixture.js naive2 0 -->
+
+      <div class="terminal">
+        <pre><code>code/ > node fixture.js naive2 0
+
+requiring ./implementations/naive2.js
+solutioning [ 1, 2, 0 ]
+3
+solutioning [ 1, 2, 1 ]
+3
+
+trying testcase 0: [ 1, 2, 0 ]
+solutioning [ 1, 2, 0 ]
+my answer: 3. correct answer: 3
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-27.html -->
+    <section class="slide">
+    <h2>Test fixture</h2>
+    <div class=>
+<!-- execution of code, node fixture.js naive2 1 -->
+
+      <div class="terminal">
+        <pre><code>code/ > node fixture.js naive2 1
+
+requiring ./implementations/naive2.js
+solutioning [ 1, 2, 0 ]
+3
+solutioning [ 1, 2, 1 ]
+3
+
+trying testcase 1: [ 1, 2, 1 ]
+solutioning [ 1, 2, 1 ]
+my answer: 3. correct answer: 2
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-28.html -->
+    <section class="slide">
+    <h2>Test fixture</h2>
+    <div class=>
+<!-- execution of code, node fixture.js correct 1 -->
+
+      <div class="terminal">
+        <pre><code>code/ > node fixture.js correct 1
+
+requiring ./implementations/correct.js
+solutioning [ 1, 2, 0 ]
+3
+solutioning [ 1, 2, 1 ]
+2
+
+trying testcase 1: [ 1, 2, 1 ]
+solutioning [ 1, 2, 1 ]
+my answer: 2. correct answer: 2
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-29.html -->
+    <section class="slide">
+    <h2>Test fixture</h2>
+    <div class=>
+<!-- execution of code, node fixture.js naive1 -->
+
+      <div class="terminal-scroll">
+        <pre><code>code/ > node fixture.js naive1
+
+requiring ./implementations/naive1.js
+solutioning [ 1, 2, 0 ]
+3
+
+trying testcase 0: [ 1, 2, 0 ]
+solutioning [ 1, 2, 0 ]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [ 1, 2, 1 ]
+solutioning [ 1, 2, 1 ]
+my answer: 3. correct answer: 2
+
+trying testcase 2: [ 1, 3, 0, 1 ]
+solutioning [ 1, 3, 0, 1 ]
+my answer: 3. correct answer: 2
+
+trying testcase 3: [ 2, 1, 3, 2 ]
+solutioning [ 2, 1, 3, 2 ]
+my answer: 3. correct answer: 2
+
+trying testcase 4: [ 2, 2, 4, 4, 0 ]
+solutioning [ 2, 2, 4, 4, 0 ]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [ 2, 3, 1, 4, 5, 0 ]
+solutioning [ 2, 3, 1, 4, 5, 0 ]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [ 1, 7, 1, 4, 5, 0, 7, 6 ]
+solutioning [ 1, 7, 1, 4, 5, 0, 7, 6 ]
+my answer: 4. correct answer: 2
+
+trying testcase 7: [ 19,
+  3,
+  1,
+  21,
+  22,
+  11,
+  13,
+  12,
+  8,
+  20,
+  32,
+  27,
+  2,
+  4,
+  23,
+  9,
+  36,
+  25,
+  39,
+  0,
+  15,
+  16,
+  38,
+  26,
+  37,
+  33,
+  7,
+  17,
+  29,
+  10,
+  34,
+  6,
+  35,
+  31,
+  24,
+  18,
+  30,
+  4,
+  14,
+  3 ]
+solutioning [ 19,
+  3,
+  1,
+  21,
+  22,
+  11,
+  13,
+  12,
+  8,
+  20,
+  32,
+  27,
+  2,
+  4,
+  23,
+  9,
+  36,
+  25,
+  39,
+  0,
+  15,
+  16,
+  38,
+  26,
+  37,
+  33,
+  7,
+  17,
+  29,
+  10,
+  34,
+  6,
+  35,
+  31,
+  24,
+  18,
+  30,
+  4,
+  14,
+  3 ]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [ 12,
+  47,
+  7,
+  58,
+  53,
+  28,
+  9,
+  10,
+  5,
+  21,
+  27,
+  1,
+  13,
+  30,
+  38,
+  19,
+  18,
+  35,
+  57,
+  26,
+  36,
+  20,
+  33,
+  32,
+  6,
+  2,
+  24,
+  29,
+  8,
+  52,
+  54,
+  0,
+  44,
+  39,
+  23,
+  37,
+  4,
+  51,
+  40,
+  45,
+  55,
+  22,
+  34,
+  59,
+  43,
+  46,
+  49,
+  3,
+  14,
+  41,
+  42,
+  25,
+  56,
+  11,
+  15,
+  16,
+  50,
+  17,
+  48,
+  31 ]
+solutioning [ 12,
+  47,
+  7,
+  58,
+  53,
+  28,
+  9,
+  10,
+  5,
+  21,
+  27,
+  1,
+  13,
+  30,
+  38,
+  19,
+  18,
+  35,
+  57,
+  26,
+  36,
+  20,
+  33,
+  32,
+  6,
+  2,
+  24,
+  29,
+  8,
+  52,
+  54,
+  0,
+  44,
+  39,
+  23,
+  37,
+  4,
+  51,
+  40,
+  45,
+  55,
+  22,
+  34,
+  59,
+  43,
+  46,
+  49,
+  3,
+  14,
+  41,
+  42,
+  25,
+  56,
+  11,
+  15,
+  16,
+  50,
+  17,
+  48,
+  31 ]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-30.html -->
+    <section class="slide">
+    <h2>Test fixture</h2>
+    <div class=>
+<!-- execution of code, node fixture.js correct -->
+
+      <div class="terminal-scroll">
+        <pre><code>code/ > node fixture.js correct
+
+requiring ./implementations/correct.js
+solutioning [ 1, 2, 0 ]
+3
+solutioning [ 1, 2, 1 ]
+2
+
+trying testcase 0: [ 1, 2, 0 ]
+solutioning [ 1, 2, 0 ]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [ 1, 2, 1 ]
+solutioning [ 1, 2, 1 ]
+my answer: 2. correct answer: 2
+
+trying testcase 2: [ 1, 3, 0, 1 ]
+solutioning [ 1, 3, 0, 1 ]
+my answer: 2. correct answer: 2
+
+trying testcase 3: [ 2, 1, 3, 2 ]
+solutioning [ 2, 1, 3, 2 ]
+my answer: 2. correct answer: 2
+
+trying testcase 4: [ 2, 2, 4, 4, 0 ]
+solutioning [ 2, 2, 4, 4, 0 ]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [ 2, 3, 1, 4, 5, 0 ]
+solutioning [ 2, 3, 1, 4, 5, 0 ]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [ 1, 7, 1, 4, 5, 0, 7, 6 ]
+solutioning [ 1, 7, 1, 4, 5, 0, 7, 6 ]
+my answer: 2. correct answer: 2
+
+trying testcase 7: [ 19,
+  3,
+  1,
+  21,
+  22,
+  11,
+  13,
+  12,
+  8,
+  20,
+  32,
+  27,
+  2,
+  4,
+  23,
+  9,
+  36,
+  25,
+  39,
+  0,
+  15,
+  16,
+  38,
+  26,
+  37,
+  33,
+  7,
+  17,
+  29,
+  10,
+  34,
+  6,
+  35,
+  31,
+  24,
+  18,
+  30,
+  4,
+  14,
+  3 ]
+solutioning [ 19,
+  3,
+  1,
+  21,
+  22,
+  11,
+  13,
+  12,
+  8,
+  20,
+  32,
+  27,
+  2,
+  4,
+  23,
+  9,
+  36,
+  25,
+  39,
+  0,
+  15,
+  16,
+  38,
+  26,
+  37,
+  33,
+  7,
+  17,
+  29,
+  10,
+  34,
+  6,
+  35,
+  31,
+  24,
+  18,
+  30,
+  4,
+  14,
+  3 ]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [ 12,
+  47,
+  7,
+  58,
+  53,
+  28,
+  9,
+  10,
+  5,
+  21,
+  27,
+  1,
+  13,
+  30,
+  38,
+  19,
+  18,
+  35,
+  57,
+  26,
+  36,
+  20,
+  33,
+  32,
+  6,
+  2,
+  24,
+  29,
+  8,
+  52,
+  54,
+  0,
+  44,
+  39,
+  23,
+  37,
+  4,
+  51,
+  40,
+  45,
+  55,
+  22,
+  34,
+  59,
+  43,
+  46,
+  49,
+  3,
+  14,
+  41,
+  42,
+  25,
+  56,
+  11,
+  15,
+  16,
+  50,
+  17,
+  48,
+  31 ]
+solutioning [ 12,
+  47,
+  7,
+  58,
+  53,
+  28,
+  9,
+  10,
+  5,
+  21,
+  27,
+  1,
+  13,
+  30,
+  38,
+  19,
+  18,
+  35,
+  57,
+  26,
+  36,
+  20,
+  33,
+  32,
+  6,
+  2,
+  24,
+  29,
+  8,
+  52,
+  54,
+  0,
+  44,
+  39,
+  23,
+  37,
+  4,
+  51,
+  40,
+  45,
+  55,
+  22,
+  34,
+  59,
+  43,
+  46,
+  49,
+  3,
+  14,
+  41,
+  42,
+  25,
+  56,
+  11,
+  15,
+  16,
+  50,
+  17,
+  48,
+  31 ]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-31.html -->
+    <section class="slide">
+    <h1>Done!</h1>
+    </section>
+
+<!-- slide-32.html -->
+    <section class="slide">
+    <h1>Let's get stupid with it</h1>
+    </section>
+
+<!-- slide-33.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    </section>
+
+<!-- slide-34.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/correct.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-34-1.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/markup/correct-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(<span id="chighlight">len(pirates)</span>+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return <span id="chighlight">len(spoken)</span> - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p><var>len(ary)</var> works like <var>ary.length</var>.</p>
+    </section>
+
+<!-- slide-34-1-1.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/markup/correct-1-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      <span id="chighlight">spoken.append(current_pirate)</span>
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p><var>len(ary)</var> works like <var>ary.length</var>.</p>
+    <p><var>ary.append(elem)</var> works like <var>ary.push(elem)</var></p>
+    </section>
+
+<!-- slide-34-1-2.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/markup/correct-1-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = <span id="chighlight">pirates[current_pirate]</span>
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p><var>len(ary)</var> works like <var>ary.length</var>.</p>
+    <p><var>ary.append(elem)</var> works like <var>ary.push(elem)</var></p>
+    <p>array indexing works as in javascript (and is 0-based)</p>
+    </section>
+
+<!-- slide-34-2.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/markup/correct-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - <span id="chighlight">spoken.index(current_pirate)</span>
+</code></pre>
+      </div>
+      <p>If <var>elem</var> is a member of <var>ary</var>, 
+    <var>ary.index(elem)</var> works like <var>ary.indexOf(elem)</var>.
+    If not, it throws an exception.</p>
+    </section>
+
+<!-- slide-34-3.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/markup/correct-3.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if <span id="chighlight">current_pirate not in spoken</span>:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>If <var>elem</var> is a member of <var>ary</var>, 
+    <var>ary.index(elem)</var> works like <var>ary.indexOf(elem)</var>.
+    If not, it throws an exception.</p>
+    <p>Use <var>in</var> to test array membership.</p>
+    </section>
+
+<!-- slide-34-4.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/markup/correct-4.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  <span id="chighlight">for i in range(len(pirates)+1):</span>
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    python's <var>for</var> is a foreach. <var>range(n)</var> returns a list
+    of the <var>n</var> elements <var>[0, 1, ..., n-1]</var>.
+    </p>
+    <p>
+    As before, we neglect the index variable <var>i</var>
+    </p>
+    </section>
+
+<!-- slide-35.html -->
+    <section class="slide">
+    <h2>python port</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/correct.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p><var>code/fixture.py</var> works just like
+    <var>code/fixture.js</var>, but for python files.</p>
+    </section>
+
+<!-- slide-36.html -->
+    <section class="slide">
+    <h2>python port</h2>
+<!-- execution of code, python fixture.py correct -->
+
+      <div class="terminal">
+        <pre><code>code/ > python fixture.py correct
+
+
+trying testcase 0: [1, 2, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [1, 2, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 2: [1, 3, 0, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 3: [2, 1, 3, 2]
+my answer: 2. correct answer: 2
+
+trying testcase 4: [2, 2, 4, 4, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [2, 3, 1, 4, 5, 0]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [1, 7, 1, 4, 5, 0, 7, 6]
+my answer: 2. correct answer: 2
+
+trying testcase 7: [19, 3, 1, 21, 22, 11, 13, 12, 8, 20, 32, 27, 2, 4, 23, 9, 36, 25, 39, 0, 15, 16, 38, 26, 37, 33, 7, 17, 29, 10, 34, 6, 35, 31, 24, 18, 30, 4, 14, 3]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [12, 47, 7, 58, 53, 28, 9, 10, 5, 21, 27, 1, 13, 30, 38, 19, 18, 35, 57, 26, 36, 20, 33, 32, 6, 2, 24, 29, 8, 52, 54, 0, 44, 39, 23, 37, 4, 51, 40, 45, 55, 22, 34, 59, 43, 46, 49, 3, 14, 41, 42, 25, 56, 11, 15, 16, 50, 17, 48, 31]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-37.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <div class="slide">
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/correct.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [] # pirates we've spoken to
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p class="slide">
+    We can absorb the first iteration into the state variables.
+    </p>
+  </div>
+    </section>
+
+<!-- slide-38.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py</var>:</p>
+<!-- listing of implementations/markup/correct-e-38.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  <span id="chighlight">spoken = [] # pirates we've spoken to</span>
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    We can absorb the first iteration into the state variables.
+    </p>
+    </section>
+
+<!-- slide-38-1.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-38-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+<span id="chighlight">  spoken = [0] # pirates we've spoken to</span>
+  current_pirate = 0 # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    We can absorb the first iteration into the state variables.
+    </p>
+    </section>
+
+<!-- slide-39.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-39.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  <span id="chighlight">current_pirate = 0 # pirate we're presently speaking to</span>
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    We can absorb the first iteration into the state variables.
+    </p>
+    </section>
+
+<!-- slide-39-1.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-39-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+<span id="chighlight">  current_pirate = pirates[0] # pirate we're presently speaking to</span>
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    We can absorb the first iteration into the state variables.
+    </p>
+    </section>
+
+<!-- slide-40.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-40.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in range(len(pirates)+1):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p class="slide">
+    This saves us an iteration
+    </p>
+    </section>
+
+<!-- slide-41.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-41.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in range(len(pirates)<span id="chighlight">+1</span>):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    This saves us an iteration
+    </p>
+    </section>
+
+<!-- slide-41-1.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-41-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in range(len(pirates)):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    This saves us an iteration
+    </p>
+    </section>
+
+<!-- slide-42.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-41-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in range(len(pirates)):
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p class="slide">
+    We no longer need <var>range(len())</var>, since we never use the index variable.
+    </p>
+    </section>
+
+<!-- slide-42-1.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-42-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in <span id="chighlight">range(len(pirates))</span>:
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    We no longer need <var>range(len())</var>, since we never use the index variable.
+    </p>
+    </section>
+
+<!-- slide-42-2.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/markup/correct-e-42-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in <span id="chighlight">pirates</span>:
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>
+    We no longer need <var>range(len())</var>, since we never use the index variable.
+    </p>
+    </section>
+
+<!-- slide-43.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/correct.py [edited]</var>:</p>
+<!-- listing of implementations/opt1.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p class="slide">This is <var>opt1.py</var>
+    </section>
+
+<!-- slide-44.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+    <p><var>code/implementations/opt1.py</var>:</p>
+<!-- listing of implementations/opt1.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>This is <var>opt1.py</var>
+    </section>
+
+<!-- slide-45.html -->
+    <section class="slide">
+    <h2>First optimization</h2>
+<!-- execution of code, python fixture.py opt1 -->
+
+      <div class="terminal">
+        <pre><code>code/ > python fixture.py opt1
+
+
+trying testcase 0: [1, 2, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [1, 2, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 2: [1, 3, 0, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 3: [2, 1, 3, 2]
+my answer: 2. correct answer: 2
+
+trying testcase 4: [2, 2, 4, 4, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [2, 3, 1, 4, 5, 0]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [1, 7, 1, 4, 5, 0, 7, 6]
+my answer: 2. correct answer: 2
+
+trying testcase 7: [19, 3, 1, 21, 22, 11, 13, 12, 8, 20, 32, 27, 2, 4, 23, 9, 36, 25, 39, 0, 15, 16, 38, 26, 37, 33, 7, 17, 29, 10, 34, 6, 35, 31, 24, 18, 30, 4, 14, 3]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [12, 47, 7, 58, 53, 28, 9, 10, 5, 21, 27, 1, 13, 30, 38, 19, 18, 35, 57, 26, 36, 20, 33, 32, 6, 2, 24, 29, 8, 52, 54, 0, 44, 39, 23, 37, 4, 51, 40, 45, 55, 22, 34, 59, 43, 46, 49, 3, 14, 41, 42, 25, 56, 11, 15, 16, 50, 17, 48, 31]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-46.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <div class="slide">
+    <p><var>code/implementations/opt1.py</var>:</p>
+<!-- listing of implementations/opt1.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+    </div>
+    </section>
+
+<!-- slide-47.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py</var>:</p>
+<!-- listing of implementations/opt1.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] # pirates we've spoken to
+  current_pirate = pirates[0] # pirate we're presently speaking to
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      # we haven't talked to current_pirate yet
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      # otherwise we're done
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>First, axe the comments.</p>
+    </section>
+
+<!-- slide-47-1.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py</var>:</p>
+<!-- listing of implementations/markup/opt1-47-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0] <span id="chighlight"># pirates we've spoken to</span>
+  current_pirate = pirates[0] <span id="chighlight"># pirate we're presently speaking to</span>
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      <span id="chighlight"># we haven't talked to current_pirate yet</span>
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      <span id="chighlight"># otherwise we're done</span>
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>First, axe the comments.</p>
+    </section>
+
+<!-- slide-48.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-47-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+  current_pirate = pirates[0]
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-49.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-47-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+  current_pirate = pirates[0]
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      spoken.append(current_pirate)
+      current_pirate = pirates[current_pirate]
+    else:
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>Now, notice that the value of <var>current_pirate</var>
+    is always the value of <var>pirates</var> indexed by the 
+    last value of the array <var>spoken</var>.</p>
+    </section>
+
+<!-- slide-49-1.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-49-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+<span id="chighlight">  current_pirate = pirates[0]</span>
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      spoken.append(current_pirate)
+<span id="chighlight">      current_pirate = pirates[current_pirate]</span>
+    else:
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>Now, notice that the value of <var>current_pirate</var>
+    is always the value of <var>pirates</var>
+    indexed by the last value of the array <var>spoken</var>.</p>
+    </section>
+
+<!-- slide-50.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-49-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+<span id="chighlight">  current_pirate = pirates[0]</span>
+
+  for i in pirates:
+
+    if current_pirate not in spoken:
+      spoken.append(current_pirate)
+<span id="chighlight">      current_pirate = pirates[current_pirate]</span>
+    else:
+      return len(spoken) - spoken.index(current_pirate)
+</code></pre>
+      </div>
+      <p>Now, notice that the value of <var>current_pirate</var>
+    is always the value of <var>pirates</var> indexed by the
+    last value of the array <var>spoken</var>.</p>
+    <p>We can replace these.</p>
+    </section>
+
+<!-- slide-51.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-51.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+  current_pirate = pirates[0]
+
+  for i in pirates:
+
+    if <span id="chighlight">current_pirate</span> not in spoken:
+      spoken.append(<span id="chighlight">current_pirate</span>)
+      current_pirate = pirates[<span id="chighlight">current_pirate</span>]
+    else:
+      return len(spoken) - spoken.index(<span id="chighlight">current_pirate</span>)
+</code></pre>
+      </div>
+      <p>Now, notice that the value of <var>current_pirate</var>
+    is always the value of <var>pirates</var> indexed by the 
+    last value of the array <var>spoken</var>.</p>
+    <p>We can replace these.</p>
+    </section>
+
+<!-- slide-51-1.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-51-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+  current_pirate = pirates[0]
+
+  for i in pirates:
+
+    if <span id="chighlight">pirates[spoken[-1]]</span> not in spoken:
+      spoken.append(<span id="chighlight">pirates[spoken[-1]]</span>)
+      current_pirate = pirates[<span id="chighlight">pirates[spoken[-1]]</span>]
+    else:
+      return len(spoken) - spoken.index(<span id="chighlight">pirates[spoken[-1]]</span>)
+</code></pre>
+      </div>
+      <p>Now, notice that the value of <var>current_pirate</var>
+    is always the value of <var>pirates</var> indexed by the
+    last value of the array <var>spoken</var>.</p>
+    <p>We can replace these.</p>
+    </section>
+
+<!-- slide-51-2.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-51-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+  current_pirate = pirates[0]
+
+  for i in pirates:
+
+    if <span id="chighlight">pirates[spoken[-1]]</span> not in spoken:
+      spoken.append(<span id="chighlight">pirates[spoken[-1]]</span>)
+      current_pirate = pirates[<span id="chighlight">pirates[spoken[-1]]</span>]
+    else:
+      return len(spoken) - spoken.index(<span id="chighlight">pirates[spoken[-1]]</span>)
+</code></pre>
+      </div>
+      <p>Now, notice that the value of <var>current_pirate</var>
+    is always the value of <var>pirates</var> indexed by the
+    last value of the array <var>spoken</var>.</p>
+    <p>We can replace these.
+    <var>ary[-1]</var> returns the last element of <var>ary</var>.</p>
+    </section>
+
+<!-- slide-52.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-52.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+  current_pirate = pirates[0]
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+      current_pirate = pirates[pirates[spoken[-1]]]
+    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Now, notice that the value of <var>current_pirate</var>
+    is always the value of <var>pirates</var> indexed by the
+    last value of the array <var>spoken</var>.</p>
+    <p>We can replace these.
+    <var>ary[-1]</var> returns the last element of <var>ary</var>.</p>
+    </section>
+
+<!-- slide-52-1.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-52.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+  current_pirate = pirates[0]
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+      current_pirate = pirates[pirates[spoken[-1]]]
+    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-53.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-53.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+<span id="chighlight">  current_pirate = pirates[0]</span>
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+<span id="chighlight">      current_pirate = pirates[pirates[spoken[-1]]]</span>
+    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>We don't need these anymore.</p>
+    </section>
+
+<!-- slide-53-1.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-53-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>We don't need these anymore.</p>
+    </section>
+
+<!-- slide-54.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt1.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt1-e-53-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p class="slide">
+    This is <var>opt2.py</var>
+    </p>
+    </section>
+
+<!-- slide-55.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+    <p><var>code/implementations/opt2.py</var>:</p>
+<!-- listing of implementations/markup/opt1-e-53-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>
+    This is <var>opt2.py</var>
+    </p>
+    </section>
+
+<!-- slide-56.html -->
+    <section class="slide">
+    <h2>Second optimization</h2>
+<!-- execution of code, python fixture.py opt2 -->
+
+      <div class="terminal">
+        <pre><code>code/ > python fixture.py opt2
+
+
+trying testcase 0: [1, 2, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [1, 2, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 2: [1, 3, 0, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 3: [2, 1, 3, 2]
+my answer: 2. correct answer: 2
+
+trying testcase 4: [2, 2, 4, 4, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [2, 3, 1, 4, 5, 0]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [1, 7, 1, 4, 5, 0, 7, 6]
+my answer: 2. correct answer: 2
+
+trying testcase 7: [19, 3, 1, 21, 22, 11, 13, 12, 8, 20, 32, 27, 2, 4, 23, 9, 36, 25, 39, 0, 15, 16, 38, 26, 37, 33, 7, 17, 29, 10, 34, 6, 35, 31, 24, 18, 30, 4, 14, 3]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [12, 47, 7, 58, 53, 28, 9, 10, 5, 21, 27, 1, 13, 30, 38, 19, 18, 35, 57, 26, 36, 20, 33, 32, 6, 2, 24, 29, 8, 52, 54, 0, 44, 39, 23, 37, 4, 51, 40, 45, 55, 22, 34, 59, 43, 46, 49, 3, 14, 41, 42, 25, 56, 11, 15, 16, 50, 17, 48, 31]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-57.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <div class="slide">
+    <p><var>code/implementations/opt2.py:</var></p>
+<!-- listing of implementations/opt2.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-58.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py:</var></p>
+<!-- listing of implementations/markup/opt2-58.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+<span id="chighlight">    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])</span>
+</code></pre>
+      </div>
+      <p>The else-block is superfluous.</p>
+    </section>
+
+<!-- slide-59.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py:</var></p>
+<!-- listing of implementations/markup/opt2-58.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+<span id="chighlight">    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])</span>
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-60.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py:</var></p>
+<!-- listing of implementations/markup/opt2-e-60.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+<span id="chighlight">    else:
+      return len(spoken) - spoken.index(pirates[spoken[-1]])</span>
+</code></pre>
+      </div>
+        <p>do this instead.</p>
+    </section>
+
+<!-- slide-60-1.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-60-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+  <span id="chighlight">return len(spoken) - spoken.index(pirates[spoken[-1]])</span>
+
+</code></pre>
+      </div>
+        <p>do this instead.</p>
+    </section>
+
+<!-- slide-61.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-61.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-62.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-61.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>
+    This works because we only modify <var>spoken</var>
+    within the if block.
+    </p>
+    </section>
+
+<!-- slide-63.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-61.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken.append(pirates[spoken[-1]])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>
+    This works because we only modify <var>spoken</var>
+    within the if block.
+    </p>
+    <p>
+    We can use the in-place assignment operator instead of 
+    <var>.append()</var>.
+    </section>
+
+<!-- slide-64.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-64.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken<span id="chighlight">.append</span>(pirates[spoken[-1]])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>
+    This works because we only modify <var>spoken</var>
+    within the if block.
+    </p>
+    <p>
+    We can use the in-place assignment operator instead of 
+    <var>.append()</var>.
+    </section>
+
+<!-- slide-64-1.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-64-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken <span id="chighlight">+= [</span>(pirates[spoken[-1]])<span id="chighlight">]</span>
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>
+    This works because we only modify <var>spoken</var>
+    within the if block.
+    </p>
+    <p>
+    We can use the in-place assignment operator instead of 
+    <var>.append()</var>.
+    </section>
+
+<!-- slide-65.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-65.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken += [(pirates[spoken[-1]])]
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-66.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-65.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+
+  for i in pirates:
+
+    if pirates[spoken[-1]] not in spoken:
+      spoken += [(pirates[spoken[-1]])]
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>
+    Let's make some room.
+    </p>
+    </section>
+
+<!-- slide-66-1.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-66-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+
+
+
+
+##    if pirates[spoken[-1]] not in spoken:
+##      spoken += [(pirates[spoken[-1]])]
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p class="slide">We can use the ternary operator.</p>
+    <p class="slide">In python, <var>a if b else c</var> works like
+    <var>b ? a : c </var>
+    </p>
+    </section>
+
+<!-- slide-66-2.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-66-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = <span id="chighlight">spoken + [(pirates[spoken[-1]])]</span>
+
+
+
+##    if pirates[spoken[-1]] not in spoken:
+##      <span id="chighlight">spoken +</span>= <span id="chighlight">[(pirates[spoken[-1]])]</span>
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>We can use the ternary operator.<p>
+    <p>In python, <var>a if b else c</var> works like
+    <var>b ? a : c </var>
+    </p>
+    </section>
+
+<!-- slide-66-3.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-66-3.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] <span id="chighlight">\</span>
+               if <span id="chighlight">pirates[spoken[-1]] not in spoken</span>
+
+
+##    if <span id="chighlight">pirates[spoken[-1]] not in spoken</span>:
+##      spoken += [(pirates[spoken[-1]])]
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>We can use the ternary operator.<p>
+    <p>In python, <var>a if b else c</var> works like
+    <var>b ? a : c </var>
+    </p>
+    </section>
+
+<!-- slide-66-4.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-66-4.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken <span id="chighlight">\</span>
+               <span id="chighlight">else spoken</span>
+
+##    if pirates[spoken[-1]] not in spoken:
+##      spoken += [(pirates[spoken[-1]])]
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>We can use the ternary operator.<p>
+    <p>In python, <var>a if b else c</var> works like
+    <var>b ? a : c </var>
+    </p>
+    </section>
+
+<!-- slide-66-5.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-66-5.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+##    if pirates[spoken[-1]] not in spoken:
+##      spoken += [(pirates[spoken[-1]])]
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p class="slide">
+    Remove commented code
+    </p>
+    </section>
+
+<!-- slide-66-5-1.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-66-5-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+<span id="chighlight">##    if pirates[spoken[-1]] not in spoken:
+##      spoken += [(pirates[spoken[-1]])]</span>
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>
+    Remove commented code
+    </p>
+    </section>
+
+<!-- slide-66-5-2.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-67.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>
+    Remove commented code
+    </p>
+    </section>
+
+<!-- slide-67.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt2.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt2-e-67.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p class="slide">
+    This is <var>opt3.py</var>
+    </p>
+    </section>
+
+<!-- slide-68.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+    <p><var>code/implementations/opt3.py:</var></p>
+<!-- listing of implementations/markup/opt2-e-67.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p>
+    This is <var>opt3.py</var>
+    </p>
+    </section>
+
+<!-- slide-69.html -->
+    <section class="slide">
+    <h2>Third optimization</h2>
+<!-- execution of code, python fixture.py opt3 -->
+
+      <div class="terminal">
+        <pre><code>code/ > python fixture.py opt3
+
+
+trying testcase 0: [1, 2, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [1, 2, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 2: [1, 3, 0, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 3: [2, 1, 3, 2]
+my answer: 2. correct answer: 2
+
+trying testcase 4: [2, 2, 4, 4, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [2, 3, 1, 4, 5, 0]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [1, 7, 1, 4, 5, 0, 7, 6]
+my answer: 2. correct answer: 2
+
+trying testcase 7: [19, 3, 1, 21, 22, 11, 13, 12, 8, 20, 32, 27, 2, 4, 23, 9, 36, 25, 39, 0, 15, 16, 38, 26, 37, 33, 7, 17, 29, 10, 34, 6, 35, 31, 24, 18, 30, 4, 14, 3]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [12, 47, 7, 58, 53, 28, 9, 10, 5, 21, 27, 1, 13, 30, 38, 19, 18, 35, 57, 26, 36, 20, 33, 32, 6, 2, 24, 29, 8, 52, 54, 0, 44, 39, 23, 37, 4, 51, 40, 45, 55, 22, 34, 59, 43, 46, 49, 3, 14, 41, 42, 25, 56, 11, 15, 16, 50, 17, 48, 31]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-70.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    </section>
+
+<!-- slide-71.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py:</var></p>
+<!-- listing of implementations/markup/opt2-e-67.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p class="slide">
+      Function out the assignment to <var>spoken</var>
+    </p>
+    </section>
+
+<!-- slide-71-1.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-71-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+
+
+
+
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p>
+      Function out the assignment to <var>spoken</var>
+    </p>
+    </section>
+
+<!-- slide-71-2.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-71-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  <span id="chighlight">def new_spoken(spoken):</span>
+
+
+
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p>
+      Function out the assignment to <var>spoken</var>
+    </p>
+    </section>
+
+<!-- slide-71-3.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-71-3.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken):
+
+
+
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = <span id="chighlight">spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken</span>
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p>
+      Function out the assignment to <var>spoken</var>
+    </p>
+    </section>
+
+<!-- slide-71-4.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-71-4.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken):
+    <span id="chighlight">return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken</span>
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = <span id="chighlight">new_spoken(spoken)</span>
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p>
+      Function out the assignment to <var>spoken</var>
+    </p>
+    </section>
+
+<!-- slide-71-5.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-71-5.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = new_spoken(spoken)
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p>
+      Function out the assignment to <var>spoken</var>
+    </p>
+    </section>
+
+<!-- slide-72.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-71-5.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = new_spoken(spoken)
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-72-1.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-71-5.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = new_spoken(spoken)
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Add a dummy argument.</p>
+    </section>
+
+<!-- slide-72-2.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-72-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken<span id="chighlight">, dummy=None</span>):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = new_spoken(spoken)
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Add a dummy argument.</p>
+    </section>
+
+<!-- slide-72-3.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-72-3.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = new_spoken(spoken)
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Add a dummy argument.</p>
+    </section>
+
+<!-- slide-73.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-72-3.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = [0]
+
+  for i in pirates:
+
+    spoken = new_spoken(spoken)
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p class="slide"><var>new_spoken()</var> is now function-compatible with
+      <var>reduce</var>.</p>
+    </section>
+
+<!-- slide-73-1.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-73-1.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+<span id="chighlight">  spoken = [0]
+
+  for i in pirates:
+
+    spoken = new_spoken(spoken)</span>
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+        <p><var>new_spoken()</var> is now function-compatible with
+      <var>reduce</var>.</p>
+    </section>
+
+<!-- slide-73-2.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-73-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+<span id="chighlight">  spoken = reduce(new_spoken, pirates, [0])</span>
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+
+
+
+
+</code></pre>
+      </div>
+        <p><var>new_spoken()</var> is now function-compatible with
+      <var>reduce</var>.</p>
+    </section>
+
+<!-- slide-74.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/markup/opt3-e-74.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(new_spoken, pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+
+
+
+
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-74-1.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt3.py [edited]:</var></p>
+<!-- listing of implementations/opt4.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(new_spoken, pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>This is <var>opt4.py</var></p>
+    </section>
+
+<!-- slide-75.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+    <p><var>code/implementations/opt4.py</var>:</p>
+<!-- listing of implementations/opt4.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(new_spoken, pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>This is <var>opt4.py</var></p>
+    </section>
+
+<!-- slide-76.html -->
+    <section class="slide">
+    <h2>Fourth optimization</h2>
+<!-- execution of code, python fixture.py opt4 -->
+
+      <div class="terminal">
+        <pre><code>code/ > python fixture.py opt4
+
+
+trying testcase 0: [1, 2, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [1, 2, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 2: [1, 3, 0, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 3: [2, 1, 3, 2]
+my answer: 2. correct answer: 2
+
+trying testcase 4: [2, 2, 4, 4, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [2, 3, 1, 4, 5, 0]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [1, 7, 1, 4, 5, 0, 7, 6]
+my answer: 2. correct answer: 2
+
+trying testcase 7: [19, 3, 1, 21, 22, 11, 13, 12, 8, 20, 32, 27, 2, 4, 23, 9, 36, 25, 39, 0, 15, 16, 38, 26, 37, 33, 7, 17, 29, 10, 34, 6, 35, 31, 24, 18, 30, 4, 14, 3]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [12, 47, 7, 58, 53, 28, 9, 10, 5, 21, 27, 1, 13, 30, 38, 19, 18, 35, 57, 26, 36, 20, 33, 32, 6, 2, 24, 29, 8, 52, 54, 0, 44, 39, 23, 37, 4, 51, 40, 45, 55, 22, 34, 59, 43, 46, 49, 3, 14, 41, 42, 25, 56, 11, 15, 16, 50, 17, 48, 31]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-77.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    </section>
+
+<!-- slide-78.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py</var>:</p>
+<!-- listing of implementations/opt4.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(new_spoken, pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-78-1.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py</var>:</p>
+<!-- listing of implementations/opt4.py -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(new_spoken, pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Use lambdas</p>
+    </section>
+
+<!-- slide-78-2.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py</var>:</p>
+<!-- listing of implementations/markup/opt4-78-2.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  <span id="chighlight">def new_spoken(spoken, dummy=None):</span>
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(<span id="chighlight">new_spoken</span>, pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Use lambdas</p>
+    </section>
+
+<!-- slide-78-3.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-78-3.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  <span id="chighlight">def new_spoken(spoken, dummy=None):</span>
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(<span id="chighlight">lambda spoken, dummy: </span>, pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Use lambdas</p>
+    </section>
+
+<!-- slide-78-4.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-78-4.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return <span id="chighlight">spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken</span>
+
+  spoken = reduce(lambda spoken, dummy: , pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Use lambdas</p>
+    </section>
+
+<!-- slide-78-5.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-78-5.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return <span id="chighlight">spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken</span>
+
+  spoken = reduce(lambda spoken, dummy: <span id="chighlight">spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken</span>,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Use lambdas</p>
+    </section>
+
+<!-- slide-78-6.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-78-6.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Use lambdas</p>
+    </section>
+
+<!-- slide-78-7.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-78-7.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+<span id="chighlight">  def new_spoken(spoken, dummy=None):
+    return spoken + [(pirates[spoken[-1]])] \
+               if pirates[spoken[-1]] not in spoken \
+               else spoken
+</span>
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Use lambdas</p>
+    </section>
+
+<!-- slide-79.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-79.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Use lambdas</p>
+    </section>
+
+<!-- slide-80.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-79.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-81.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-79.pym -->
+ 
+      <div class="terminal">
+        <pre><code>def solution(pirates):
+
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Then use more lambdas</p>
+    </section>
+
+<!-- slide-82.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-82.pym -->
+ 
+      <div class="terminal">
+        <pre><code><span id="chighlight">def solution(pirates):</span>
+
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Then use more lambdas</p>
+    </section>
+
+<!-- slide-83.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-83.pym -->
+ 
+      <div class="terminal">
+        <pre><code><span id="chighlight">solution = lambda pirates: \</span>
+
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Then use more lambdas</p>
+    </section>
+
+<!-- slide-84.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-84.pym -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+<span id="chighlight">  (lambda spoken: </span>
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+  return len(spoken) - spoken.index(pirates[spoken[-1]])
+</code></pre>
+      </div>
+      <p>Then use more lambdas</p>
+    </section>
+
+<!-- slide-85.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-85.pym -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+  (lambda spoken: 
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+<span id="chighlight">  return len(spoken) - spoken.index(pirates[spoken[-1]])</span>
+</code></pre>
+      </div>
+        <p>Then use more lambdas</p>
+    </section>
+
+<!-- slide-86.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-86.pym -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+  (lambda spoken: <span id="chighlight">len(spoken) - spoken.index(pirates[spoken[-1]])</span>
+  spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])
+
+
+</code></pre>
+      </div>
+      <p>Then use more lambdas.</p>
+    </section>
+
+<!-- slide-87.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-87.pym -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+  (lambda spoken: len(spoken) - spoken.index(pirates[spoken[-1]])
+  <span id="chighlight">spoken = reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0])</span>
+</code></pre>
+      </div>
+      <p>Then use more lambdas</p>
+    </section>
+
+<!-- slide-88.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/markup/opt4-88.pym -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+  (lambda spoken: len(spoken) - spoken.index(pirates[spoken[-1]])
+  <span id="chighlight">)(reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0]))</span>
+</code></pre>
+      </div>
+        <p>Then use more lambdas</p>
+    </section>
+
+<!-- slide-89.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/opt5.py -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+  (lambda spoken: len(spoken) - spoken.index(pirates[spoken[-1]])
+  )(reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0]))
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-90.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt4.py [edited]</var>:</p>
+<!-- listing of implementations/opt5.py -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+  (lambda spoken: len(spoken) - spoken.index(pirates[spoken[-1]])
+  )(reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0]))
+</code></pre>
+      </div>
+      <p>This is <var>opt5.py<var></p>
+    </section>
+
+<!-- slide-91.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt5.py</var>:</p>
+<!-- listing of implementations/opt5.py -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+  (lambda spoken: len(spoken) - spoken.index(pirates[spoken[-1]])
+  )(reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0]))
+</code></pre>
+      </div>
+      <p>This is <var>opt5.py<var></p>
+    </section>
+
+<!-- slide-92.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+<!-- execution of code, python fixture.py opt5 -->
+
+      <div class="terminal">
+        <pre><code>code/ > python fixture.py opt5
+
+
+trying testcase 0: [1, 2, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [1, 2, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 2: [1, 3, 0, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 3: [2, 1, 3, 2]
+my answer: 2. correct answer: 2
+
+trying testcase 4: [2, 2, 4, 4, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [2, 3, 1, 4, 5, 0]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [1, 7, 1, 4, 5, 0, 7, 6]
+my answer: 2. correct answer: 2
+
+trying testcase 7: [19, 3, 1, 21, 22, 11, 13, 12, 8, 20, 32, 27, 2, 4, 23, 9, 36, 25, 39, 0, 15, 16, 38, 26, 37, 33, 7, 17, 29, 10, 34, 6, 35, 31, 24, 18, 30, 4, 14, 3]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [12, 47, 7, 58, 53, 28, 9, 10, 5, 21, 27, 1, 13, 30, 38, 19, 18, 35, 57, 26, 36, 20, 33, 32, 6, 2, 24, 29, 8, 52, 54, 0, 44, 39, 23, 37, 4, 51, 40, 45, 55, 22, 34, 59, 43, 46, 49, 3, 14, 41, 42, 25, 56, 11, 15, 16, 50, 17, 48, 31]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-93.html -->
+    <section class="slide">
+    <h2>Fifth optimization</h2>
+    <p><var>code/implementations/opt5.py</var>:</p>
+<!-- listing of implementations/opt5.py -->
+ 
+      <div class="terminal">
+        <pre><code>solution = lambda pirates: \
+  (lambda spoken: len(spoken) - spoken.index(pirates[spoken[-1]])
+  )(reduce(lambda spoken, dummy: spoken + [(pirates[spoken[-1]])] \
+                   if pirates[spoken[-1]] not in spoken \
+                   else spoken,
+                  pirates, [0]))
+</code></pre>
+      </div>
+      <p>This is <var>opt5.py<var></p>
+    </section>
+
+<!-- slide-94.html -->
+    <section class="slide">
+    <h2>Minimize it</h2>
+    <div class="slide">
+    <p><var>code/implementations/min.py</var>:</p>
+<!-- listing of implementations/min.py -->
+ 
+      <div class="terminal">
+        <pre><code>solution=lambda p:(lambda s:len(s)-s.index(p[s[-1]]))(reduce(lambda s,d:s+[(p[s[-1]])] if p[s[-1]] not in s else s,p,[0]))
+
+</code></pre>
+      </div>
+      </div>
+    </section>
+
+<!-- slide-95.html -->
+    <section class="slide">
+    <h2>Minimize it</h2>
+<!-- execution of code, python fixture.py min -->
+
+      <div class="terminal">
+        <pre><code>code/ > python fixture.py min
+
+
+trying testcase 0: [1, 2, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 1: [1, 2, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 2: [1, 3, 0, 1]
+my answer: 2. correct answer: 2
+
+trying testcase 3: [2, 1, 3, 2]
+my answer: 2. correct answer: 2
+
+trying testcase 4: [2, 2, 4, 4, 0]
+my answer: 3. correct answer: 3
+
+trying testcase 5: [2, 3, 1, 4, 5, 0]
+my answer: 6. correct answer: 6
+
+trying testcase 6: [1, 7, 1, 4, 5, 0, 7, 6]
+my answer: 2. correct answer: 2
+
+trying testcase 7: [19, 3, 1, 21, 22, 11, 13, 12, 8, 20, 32, 27, 2, 4, 23, 9, 36, 25, 39, 0, 15, 16, 38, 26, 37, 33, 7, 17, 29, 10, 34, 6, 35, 31, 24, 18, 30, 4, 14, 3]
+my answer: 2. correct answer: 2
+
+trying testcase 8: [12, 47, 7, 58, 53, 28, 9, 10, 5, 21, 27, 1, 13, 30, 38, 19, 18, 35, 57, 26, 36, 20, 33, 32, 6, 2, 24, 29, 8, 52, 54, 0, 44, 39, 23, 37, 4, 51, 40, 45, 55, 22, 34, 59, 43, 46, 49, 3, 14, 41, 42, 25, 56, 11, 15, 16, 50, 17, 48, 31]
+my answer: 50. correct answer: 50
+</code></pre>
+      </div>
+      </section>
+
+<!-- slide-96.html -->
+    <section class="slide">
+    </section>
+
+<!-- slide-97.html -->
+    <section class="slide">
+    <h2>Acknowledgements</h2>
+    <ul>
+      <li>Carlo Maldonado, for css and graphics help</li>
+      <li>Drew Dahlman, for the problem concept and oranizing dvlp</li>
+    </section>
+
+<!-- tail.html -->
+    <!-- End slides. -->
+
+    <!-- Begin extension snippets. Add or remove as needed. -->
+
+    <!-- deck.navigation snippet -->
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.status snippet -->
+    <p class="deck-status" aria-role="status">
+      <span class="deck-status-current"></span>
+      /
+      <span class="deck-status-total"></span>
+    </p>
+
+    <!-- deck.goto snippet -->
+    <form action="." method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="deck.js/jquery.min.js"></script>
+<script src="deck.js/core/deck.core.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="deck.js/extensions/menu/deck.menu.js"></script>
+<script src="deck.js/extensions/goto/deck.goto.js"></script>
+<script src="deck.js/extensions/status/deck.status.js"></script>
+<script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+<script src="deck.js/extensions/scale/deck.scale.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>
+
